@@ -4,7 +4,7 @@ on:
   workflow_dispatch: # Allows you to start it manually for testing
   schedule:
     # Runs every 5 minutes (the maximum frequency allowed by GitHub)
-    - cron: '* */6 * * *'
+    - cron: '42 */6 * * *'
 
 jobs:
   execute-script:
