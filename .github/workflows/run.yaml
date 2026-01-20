@@ -1,12 +1,10 @@
 name: Continuous High-Scale Execution
 
 on:
+  workflow_dispatch: # Allows you to start it manually for testing
   schedule:
     # Runs every 5 minutes (the maximum frequency allowed by GitHub)
     - cron: '*/15 * * * *'
-
-on:
-  workflow_dispatch: # Allows you to start it manually for testing
 
 jobs:
   execute-script:
